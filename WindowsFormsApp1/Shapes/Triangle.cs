@@ -19,9 +19,6 @@ namespace WindowsFormsApp1
         public override void Draw()
         {
             base.Draw();
-            //PointF p = ;
-            // PointF[] points = new PointF[] { new PointF(500, 500) , new PointF(550, 550), new PointF(400, 570) };
-
             formGraphics.FillPolygon(myBrush, locationPoints);
         }
     }

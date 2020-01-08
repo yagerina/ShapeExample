@@ -50,8 +50,14 @@ namespace WindowsFormsApp1
                 Square aSquare = new Square(this, rect2, randomColor());
                 Rectangle rect3 = new Rectangle(rnd.Next(1, 1000), rnd.Next(1, 1000), 200, 200);
                 LetterCircle aLetterCircle = new LetterCircle(this, rect3, randomColor());
+                //EJY create a random x & y starting point for the shape
+                int rX = rnd.Next(1, 1000);
+                int rY = rnd.Next(1, 1000);
+                //EJY Draw a 200 px triangle, increasing points by the random amounts equally
+                Triangle aTriangle = new Triangle(this, new PointF[] { new PointF(100+rX, 0+rY), new PointF(200+rX, 200+rY), new PointF(0+rX, 200+rY) }, randomColor());
 
                 shapeList.Add(aCircle);
+                shapeList.Add(aTriangle);
                 //shapeList.Add(aSquare);
                 //shapeList.Add(aLetterCircle);
             }
